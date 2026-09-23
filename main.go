@@ -53,7 +53,7 @@ func seeStats(stats TextStats) {
 }
 
 func getTopWords(wordFreq map[string]int, topN int) []WordStat {
-	stats := make([]WordStat, len(wordFreq))
+	stats := make([]WordStat, 0, len(wordFreq))
 
 	for word, count := range wordFreq {
 		stats = append(stats, WordStat{Word: word, Count: count})
